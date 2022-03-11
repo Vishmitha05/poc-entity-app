@@ -1,0 +1,38 @@
+<hr>
+<p style="color:blue">
+  vehicle module works here!
+</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"> VEHICLE ID</th>
+      <th scope="col"> NAME</th>
+      <th scope="col">VIN</th>
+      <th scope="col">MAKE/MODEL/YEAR </th>
+      <th scope="col">LICENSE PLATE NO</th>
+      <th scope="col">ODOMTER</th>
+      <th scope="col">FUEL LEVEL</th>
+      <th scope="col">ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vehicle of vehicles; let i = index">
+      <td>{{vehicle.id}}</td>
+      <td>{{vehicle.name}}</td>
+      <td>{{vehicle.vin}}</td>
+      <td>{{vehicle.make}}/{{vehicle.model}}/{{vehicle.year}}</td>
+      <td>{{vehicle.licenseNo}}</td>
+      <td>{{vehicle.odometer}} mi</td>
+      <td>{{vehicle.fuelLevel}} %</td>
+
+      <td>
+        <!-- <input [(ngModel)]="odometer" placeholder="Odometer"> -->
+        <button class="btn btn-primary">Update Odometer</button>
+        <button class="btn btn-danger" (click)="deleteVehicle(i)">Delete Vehicle</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-updateOdometer></app-updateOdometer>

@@ -10,3 +10,9 @@ export enum WorkStatus {
     unavailable = "InTrip",
     unknown = "Unknown"
 }
+
+export enum Status {
+    Trip = "InTrip",
+    Stop = "Stop",
+    Idle = "Idling"
+}

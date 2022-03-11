@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DriverModule } from './driver/driver.module';
+import { VehicleModule } from './vehicle/vehicle.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { DriverModule } from './driver/driver.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DriverModule
+    DriverModule,
+    VehicleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
