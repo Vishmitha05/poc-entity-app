@@ -25,14 +25,13 @@
       <td>{{vehicle.licenseNo}}</td>
       <td>{{vehicle.odometer}} mi</td>
       <td>{{vehicle.fuelLevel}} %</td>
-
       <td>
-        <!-- <input [(ngModel)]="odometer" placeholder="Odometer"> -->
-        <button class="btn btn-primary">Update Odometer</button>
+        <button class="btn btn-primary" (click)="updateOdometer(i)">Update Odometer</button>
         <button class="btn btn-danger" (click)="deleteVehicle(i)">Delete Vehicle</button>
       </td>
     </tr>
   </tbody>
 </table>
+<!-- <input type="number" [(ngModel)]="odometerValue" placeholder="Odometer" /> -->
 
 <app-updateOdometer></app-updateOdometer>

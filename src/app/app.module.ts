@@ -1,10 +1,12 @@
 import { NgModule, Pipe } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DriverModule } from './driver/driver.module';
 import { VehicleModule } from './vehicle/vehicle.module';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { VehicleModule } from './vehicle/vehicle.module';
     BrowserModule,
     AppRoutingModule,
     DriverModule,
-    VehicleModule
+    VehicleModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
