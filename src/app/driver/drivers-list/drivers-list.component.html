@@ -1,0 +1,8 @@
+<p>
+  drivers-list works!
+</p>
+
+<p *ngFor="let driver of drivers">
+  {{driver | json}}
+  <button class="btn btn-dark" (click)="updateStatus(driver)">Update Driver Status</button>
+</p>
