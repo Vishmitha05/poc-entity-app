@@ -2,7 +2,14 @@
 <p style="color:blue">
   vehicle module works here!
 </p>
-
+<div class="col-md-12">
+  <div class="col-md-5" style="display:inline-block">
+    <h6>No of Vehicles: {{vehicles.length}}</h6>
+  </div>
+  <div class="col-md-6" style="float:right;margin-right:10px;">
+    <button style="float:right;" class="btn btn-primary" routerLink="/addVehicle">+ Add Vehicle</button>
+  </div>
+</div>
 <table class="table">
   <thead>
     <tr>
@@ -10,6 +17,7 @@
       <th scope="col"> NAME</th>
       <th scope="col">VIN</th>
       <th scope="col">MAKE/MODEL/YEAR </th>
+      <th scope="col">MAINTENANCE STATUS </th>
       <th scope="col">LICENSE PLATE NO</th>
       <th scope="col">ODOMTER</th>
       <th scope="col">FUEL LEVEL</th>
@@ -22,6 +30,10 @@
       <td>{{vehicle.name}}</td>
       <td>{{vehicle.vin}}</td>
       <td>{{vehicle.make}}/{{vehicle.model}}/{{vehicle.year}}</td>
+      <td [ngStyle]="vehicle.maintenanceStatus == 'OK' ? {'color':'green'} : {'color': 'Red'}">
+        {{vehicle.maintenanceStatus}}
+        <button class="btn btn-link" (click)="changeStatus(i)">Change</button>
+      </td>
       <td>{{vehicle.licenseNo}}</td>
       <td>{{vehicle.odometer}} mi</td>
       <td>{{vehicle.fuelLevel}} %</td>
@@ -32,6 +44,9 @@
     </tr>
   </tbody>
 </table>
-<!-- <input type="number" [(ngModel)]="odometerValue" placeholder="Odometer" /> -->
 
-<app-updateOdometer></app-updateOdometer>
+<form *ngIf="this.nameIndex" (ngSubmit)="updated()">
+  <h6 style="color:blue">Update Odometer for {{this.nameIndex}}</h6>
+  <input type="number" name="odometer" [(ngModel)]="computedOdometer" value="computedOdometer" />
+  <button style="margin-right:5px;" class="btn btn-primary" type="submit">Update</button>
+</form>

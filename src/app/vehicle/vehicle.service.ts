@@ -15,6 +15,7 @@ export class VehicleService {
       model: '540i',
       year: 2018,
       licenseNo: 'ABS 2019',
+      maintenanceStatus: 'OK',
       odometer: 1500,
       fuelLevel: 95
     },
@@ -27,6 +28,7 @@ export class VehicleService {
       model: '540i',
       year: 2018,
       licenseNo: 'ABS 2019',
+      maintenanceStatus: 'Due',
       odometer: 1500,
       fuelLevel: 95
     },

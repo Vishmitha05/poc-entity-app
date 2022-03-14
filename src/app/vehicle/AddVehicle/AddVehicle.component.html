@@ -1,0 +1,43 @@
+<h4 style="color:blue">Add Vehicle </h4>
+<div class="form">
+  <!-- <p [ngStyle]="{color:getColor()}">{{this.message}}</p> -->
+  <!-- <div *ngIf="this.message !== 'Trainer added successfully'"> -->
+  <div class="form1">
+    <label class="label1">
+      Vehicle Name </label>
+    <input [(ngModel)]="name" class="input1" type="text" placeholder="Enter Vehicle Name">
+  </div>
+  <div class="form1">
+    <label class="label1">
+      VIN </label>
+    <input [(ngModel)]="vin" class="input1" type="text" placeholder="Enter VIN">
+  </div>
+  <div class="form1">
+    <label class="label1">
+      Make </label>
+    <input [(ngModel)]="make" class="input1" type="text" placeholder="Enter Make">
+  </div>
+  <div class="form1">
+    <label class="label1">
+      Model </label> <input [(ngModel)]="model" class="input1" type="text" placeholder="Enter Model">
+  </div>
+  <div class="form1">
+    <label class="label1">
+      Year </label>
+    <input [(ngModel)]="year" class="input1" type="number" placeholder="Enter Year">
+  </div>
+  <div class="form1">
+    <label class="label1">
+      License Plate Number </label>
+    <input [(ngModel)]="licenseNo" class="input1" type="text" placeholder="Enter License Plate No">
+  </div>
+  <div class="form1">
+    <label class="label1">
+      Odometer </label>
+    <input [(ngModel)]="odometer" class="input1" type="number" placeholder="Enter Odometer">
+  </div>
+
+  <button type="submit" (click)="addVehicle()" class="btn btn1 btnSize">
+    Add Vehicle
+  </button>
+</div>

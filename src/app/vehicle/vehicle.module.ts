@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VehicleComponent } from './vehicle.component';
-import { UpdateOdometerComponent } from './updateOdometer/updateOdometer.component';
+import { FormsModule } from '@angular/forms';
+import { AddVehicleComponent } from './AddVehicle/AddVehicle.component';
+
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
   ],
-  declarations: [VehicleComponent, UpdateOdometerComponent],
-  exports: [VehicleComponent]
+  declarations: [VehicleComponent, AddVehicleComponent],
+  exports: [VehicleComponent,],
 
 })
 export class VehicleModule { }
